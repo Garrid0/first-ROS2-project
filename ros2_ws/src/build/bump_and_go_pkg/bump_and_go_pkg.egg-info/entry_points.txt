@@ -1,0 +1,3 @@
+[console_scripts]
+driver = bump_and_go_pkg.driver:main
+

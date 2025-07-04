@@ -1,0 +1,37 @@
+running egg_info
+creating ../../build/bump_and_go_pkg/bump_and_go_pkg.egg-info
+writing ../../build/bump_and_go_pkg/bump_and_go_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/bump_and_go_pkg/bump_and_go_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/bump_and_go_pkg/bump_and_go_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/bump_and_go_pkg/bump_and_go_pkg.egg-info/requires.txt
+writing top-level names to ../../build/bump_and_go_pkg/bump_and_go_pkg.egg-info/top_level.txt
+writing manifest file '../../build/bump_and_go_pkg/bump_and_go_pkg.egg-info/SOURCES.txt'
+reading manifest file '../../build/bump_and_go_pkg/bump_and_go_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/bump_and_go_pkg/bump_and_go_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/algarrid/first-ROS2-project/ros2_ws/build/bump_and_go_pkg/build
+creating /home/algarrid/first-ROS2-project/ros2_ws/build/bump_and_go_pkg/build/lib
+creating /home/algarrid/first-ROS2-project/ros2_ws/build/bump_and_go_pkg/build/lib/bump_and_go_pkg
+copying bump_and_go_pkg/__init__.py -> /home/algarrid/first-ROS2-project/ros2_ws/build/bump_and_go_pkg/build/lib/bump_and_go_pkg
+copying bump_and_go_pkg/driver.py -> /home/algarrid/first-ROS2-project/ros2_ws/build/bump_and_go_pkg/build/lib/bump_and_go_pkg
+running install
+running install_lib
+creating /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/lib/python3.10/site-packages/bump_and_go_pkg
+copying /home/algarrid/first-ROS2-project/ros2_ws/build/bump_and_go_pkg/build/lib/bump_and_go_pkg/__init__.py -> /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/lib/python3.10/site-packages/bump_and_go_pkg
+copying /home/algarrid/first-ROS2-project/ros2_ws/build/bump_and_go_pkg/build/lib/bump_and_go_pkg/driver.py -> /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/lib/python3.10/site-packages/bump_and_go_pkg
+byte-compiling /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/lib/python3.10/site-packages/bump_and_go_pkg/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/lib/python3.10/site-packages/bump_and_go_pkg/driver.py to driver.cpython-310.pyc
+running install_data
+creating /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/share/ament_index
+creating /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/share/ament_index/resource_index
+creating /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/share/ament_index/resource_index/packages
+copying resource/bump_and_go_pkg -> /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/share/bump_and_go_pkg
+creating /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/share/bump_and_go_pkg/launch
+copying launch/start_demo.launch.py -> /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/share/bump_and_go_pkg/launch
+running install_egg_info
+Copying ../../build/bump_and_go_pkg/bump_and_go_pkg.egg-info to /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/lib/python3.10/site-packages/bump_and_go_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing driver script to /home/algarrid/first-ROS2-project/ros2_ws/install/bump_and_go_pkg/lib/bump_and_go_pkg
+writing list of installed files to '/home/algarrid/first-ROS2-project/ros2_ws/build/bump_and_go_pkg/install.log'
