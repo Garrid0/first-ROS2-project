@@ -1,20 +1,15 @@
 # ROS 2 "Bump and Go" Demo
 
-![TurtleBot3 in RViz](https://www.robotis.us/images/product/turtlebot3/turtlebot3_friends.png)
-
-This project provides a simple demonstration of a reactive navigation algorithm known as "Bump and Go." It features a simulated TurtleBot3 robot in an office environment, controlled by a ROS 2 node written in Python. The robot uses its LIDAR sensor to detect obstacles and changes its direction when it gets too close.
-
-The primary goal of this repository is to showcase a modern robotics workflow by encapsulating the entire application into a **universal Docker container**. This container can run on any machine without requiring a dedicated NVIDIA GPU, making it highly portable and accessible.
+This project provides a simple demonstration of a reactive navigation algorithm known as "Bump and Go." It shows a simulated TurtleBot3 robot in a TurtleBot3 world, controlled by a ROS 2 node written in Python. The robot uses its LIDAR sensor to detect obstacles and changes its direction when it gets too close.
 
 ## Features
 
 - **Algorithm:** Simple "Bump and Go" logic.
 - **Robot:** TurtleBot3 Burger.
-- **Environment:** An office simulation world (`office_small.world`).
+- **Environment:** TurtleBot3 world.
 - **Framework:** ROS 2 Humble.
-- **Simulator:** Gazebo (running in `headless` mode for universal compatibility).
+- **Simulator:** Gazebo.
 - **Visualization:** RViz2.
-- **Deployment Technology:** Docker Container.
 
 ---
 
@@ -49,3 +44,13 @@ Open a terminal and clone this project to your local machine.
 ```bash
 git clone https://github.com/your-username/first-ROS2-project.git
 cd first-ROS2-project
+```
+
+### 2. Build the Docker Image
+From the root of the project directory, run the following command to build the container image
+```bash
+docker build -t bump-and-go-app .
+```
+
+
+
