@@ -1,6 +1,6 @@
 # ROS 2 "Bump and Go" Demo
 
-This project provides a simple demonstration of a reactive navigation algorithm known as "Bump and Go." It shows a simulated TurtleBot3 robot in a TurtleBot3 world, controlled by a ROS 2 node written in Python. The robot uses its LIDAR sensor to detect obstacles and changes its direction when it gets too close.
+This project provides a simple demonstration of a reactive navigation algorithm known as "Bump and Go." It shows a simulated [TurtleBot3](https://www.turtlebot.com/turtlebot3/) robot in a TurtleBot3 world, controlled by a ROS 2 node written in Python. The robot uses its LIDAR sensor to detect obstacles and changes its direction when it gets too close.
 
 ## Features
 
