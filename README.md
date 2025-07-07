@@ -35,7 +35,7 @@ To run this project, you only need a Linux system (Ubuntu 22.04 is recommended) 
 
 ---
 
-## 🚀 How to Run the Demo
+## How to Run the Demo
 
 The process is very straightforward and consists of 3 steps.
 
@@ -52,6 +52,18 @@ cd first-ROS2-project
 From the root of the project directory, run the following command to build the container image
 ```bash
 docker build -t bump-and-go-app .
+```
+
+### 3. Source the environment
+Inside the ros2_ws folder run the following command:
+```bash
+source install/setup.bash
+```
+
+### 4. Launch the application
+Inside the ros2_ws folder run the following command:
+```bash
+ros2 launch bump_and_go_pkg start_demo.launch.py
 ```
 
 
