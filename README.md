@@ -1,5 +1,6 @@
 # ROS 2 "Bump and Go" Demo
 
+This project is part of one of the exercises of the [ACM SIGSOFT Summer School for Software Engineering](https://scivenia.com/en/event/acm-sigsoft-summer-school-for-software-engineering-in-robotic) for Robotics that took place in June 2025 at TU Delft, which was presetned by 
 This project provides a simple demonstration of a reactive navigation algorithm known as "Bump and Go." It shows a simulated [TurtleBot3](https://www.turtlebot.com/turtlebot3/) robot in a TurtleBot3 world, controlled by a ROS 2 node written in Python. The robot uses its LIDAR sensor to detect obstacles and changes its direction when it gets too close.
 
 ## Features
