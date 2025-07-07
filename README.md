@@ -11,7 +11,7 @@ The project provides a simple demonstration of a reactive navigation algorithm k
 - **Algorithm:** Simple "Bump and Go" logic.
 - **Robot:** TurtleBot3 Burger.
 - **Environment:** TurtleBot3 world.
-- **Framework:** ROS 2 Humble.
+- **Framework:** ROS2 Humble.
 - **Simulator:** Gazebo.
 - **Visualization:** RViz2.
 
@@ -21,19 +21,9 @@ The project provides a simple demonstration of a reactive navigation algorithm k
 
 To run this project, you only need a Linux system (Ubuntu 22.04 is recommended) with **Docker** installed.
 
-1.  **Install Docker Engine:**
+**Install Docker Engine:**
     Follow the official installation guide for your operating system.
     - [Docker installation instructions for Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-
-2.  **Manage Docker as a non-root user (Recommended):**
-    To avoid using `sudo` for every Docker command, add your user to the `docker` group.
-    ```bash
-    sudo groupadd docker
-    sudo usermod -aG docker $USER
-    ```
-    After running this, you must **log out and log back in** or **reboot your machine** for the group changes to take effect.
-
-**That's it!** You do not need to install ROS 2, Gazebo, or any other dependencies on your host machine. Everything is self-contained within the Docker container.
 
 ---
 
@@ -56,17 +46,15 @@ From the root of the project directory, run the following command to build the c
 docker build -t bump-and-go-app .
 ```
 
-### 3. Source the environment
-Inside the ros2_ws folder run the following command:
+### 3. =Run the container:
 ```bash
-source install/setup.bash
+docker run -it --rm \
+    --gpus all \
+    -e DISPLAY=$DISPLAY \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    bump-and-go-gui-app
 ```
 
-### 4. Launch the application
-Inside the ros2_ws folder run the following command:
-```bash
-ros2 launch bump_and_go_pkg start_demo.launch.py
-```
 
 
 
