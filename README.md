@@ -46,7 +46,7 @@ From the root of the project directory, run the following command to build the c
 docker build -t bump-and-go-app .
 ```
 
-### 3. =Run the container:
+### 3. Run the container:
 ```bash
 docker run -it --rm \
     --gpus all \
