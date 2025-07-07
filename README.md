@@ -4,6 +4,8 @@ This project is part of one of the exercises of the [ACM SIGSOFT Summer School f
 
 The project provides a simple demonstration of a reactive navigation algorithm known as "Bump and Go." It shows a simulated [TurtleBot3](https://www.turtlebot.com/turtlebot3/) robot in a TurtleBot3 world, controlled by a ROS2 node written in Python. The robot uses its LIDAR sensor to detect obstacles and changes its direction when it gets too close.
 
+![Demostración del Robot en Acción](videos/bump_and_go.gif)
+
 ## Features
 
 - **Algorithm:** Simple "Bump and Go" logic.
