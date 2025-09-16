@@ -36,7 +36,7 @@ The process is very straightforward and consists of 3 steps.
 Open a terminal and clone this project to your local machine.
 
 ```bash
-git clone https://github.com/your-username/first-ROS2-project.git
+git clone https://github.com/garrid0/first-ROS2-project.git
 cd first-ROS2-project
 ```
 
