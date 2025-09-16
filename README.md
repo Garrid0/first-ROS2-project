@@ -46,13 +46,13 @@ From the root of the project directory, run the following command to build the c
 docker build -t bump-and-go-app .
 ```
 
-### 3. Run the container:
+### 3. Run the application:
 ```bash
-docker run -it --rm \
-    --gpus all \
-    -e DISPLAY=$DISPLAY \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    bump-and-go-gui-app
+cd ~/first-ROS2-project/ros2_ws/
+
+source install/setup.bash
+ros2 launch bump_and_go_pkg start_demo.launch.py
+
 ```
 
 
