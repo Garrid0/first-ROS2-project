@@ -1,0 +1,32 @@
+services:
+  app:
+    # Construye la imagen usando el Dockerfile en el directorio actual.
+    build: .
+    # Nombre de la imagen que se creará.
+    image: bump-and-go-app
+    # Nombre del contenedor en ejecución.
+    container_name: bump_and_go_container
+    # Permite que el contenedor sea interactivo y tenga una pseudo-TTY.
+    stdin_open: true
+    tty: true
+    # Elimina el contenedor cuando se detiene.
+    restart: "no"
+    # Configuración de red. 'host' es la más simple para que ROS funcione a través de la red.
+    network_mode: host
+    # Privilegiado es necesario para acceder a dispositivos como la GPU.
+    privileged: true
+    # Monta volúmenes para la interfaz gráfica.
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    # Pasa las variables de entorno para la GUI.
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    # Configuración para el acceso a la GPU NVIDIA (si está disponible).
+    #deploy:
+    #  resources:
+    #    reservations:
+    #      devices:
+    #        - driver: nvidia
+    #          count: 1
+    #          capabilities: [gpu]

@@ -1,4 +1,4 @@
-# launch/start_demo.launch.py (Versión FINAL que usa un mundo externo)
+# launch/start_demo.launch.py 
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
@@ -7,17 +7,17 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    # --- 1. CONFIGURACIÓN DE RUTAS ---
 
-
+    # --- 1. Route configuration ---
     print("="*60)
-    print("INICIANDO DEPURACIÓN DEL LAUNCH FILE")
+    
+    print("LAUNCH FILE")
     
     gz_path = os.environ.get('GZ_SIM_RESOURCE_PATH')
-    print(f"VALOR DE GZ_SIM_RESOURCE_PATH: {gz_path}")
+    print(f"GZ_SIM_RESOURCE_PATH: {gz_path}")
     
     print("="*60)    
-    # Ruta al paquete de simulación de TurtleBot3
+    # Route to the TurtleBot3 package
     pkg_turtlebot3_gazebo = get_package_share_directory('turtlebot3_gazebo')
     
     world_fuel_url = 'https://fuel.gazebosim.org/1.0/Adlink/worlds/Industrial%20Warehouse/1/industrial_warehouse.sdf'
@@ -44,9 +44,9 @@ def generate_launch_description():
     #    value=models_path
     #)
 
-    # --- 2. LANZAMIENTO DE LA SIMULACIÓN (GAZEBO + ROBOT) ---
+    # --- 2. Launch simulation (GAZEBO + ROBOT) ---
 
-    # Incluimos el launch file de TurtleBot3 y le pasamos la ruta absoluta a nuestro mundo.
+    # Include TurtleBot3 launch file y and send absolute path to the world.
     start_world = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(pkg_turtlebot3_gazebo, 'launch', 'turtlebot3_world.launch.py')
@@ -55,7 +55,7 @@ def generate_launch_description():
         launch_arguments={'world': world_fuel_url}.items()
     )
 
-    # --- 3. LANZAMIENTO DE LA VISUALIZACIÓN (RVIZ2) ---
+    # --- 3. VISUALIZATION LAUNCH (RVIZ2) ---
     start_rviz2 = Node(
         package='rviz2',
         executable='rviz2',
@@ -64,7 +64,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    # --- 4. LANZAMIENTO DE NUESTRO NODO "CEREBRO" ---
+    # --- 4. LAUNCH THE BUMP AND GO NODE ---
     start_bump_and_go_node = Node(
         package='bump_and_go_pkg',
         executable='driver',
@@ -72,7 +72,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    # --- 5. CREACIÓN DE LA DESCRIPCIÓN DE LANZAMIENTO ---
+    # --- 5. Creation of the launch description ---
     return LaunchDescription([
     	#set_gazebo_resource_path,
         start_world,
