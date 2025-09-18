@@ -41,18 +41,28 @@ cd first-ROS2-project
 ```
 
 ### 2. Build the Docker Image
-From the root of the project directory, run the following command to build the container image
+From the root of the project directory, run the following command to build the container image:
 ```bash
-docker build -t bump-and-go-app .
+docker compose build
 ```
 
-### 3. Run the application:
+### 3. Run docker image
+After building the Docker image, run it with the following command :
 ```bash
-cd ~/first-ROS2-project/ros2_ws/
+docker compose up
+```
 
-source install/setup.bash
+### 3. Open Ubnty desktop
+Open http://localhost:6080 in your browser to access the Ubuntu MATE desktop.
+
+
+### 4. Run the application
+Inside ros2_ws directory run:
+```bash
+cd /ros2_ws
+colcon build --symlink-install
+source /ros2_ws/install/setup.bash
 ros2 launch bump_and_go_pkg start_demo.launch.py
-
 ```
 
 
