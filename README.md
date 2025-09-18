@@ -19,8 +19,6 @@ The project provides a simple demonstration of a reactive navigation algorithm k
 
 ## Prerequisites
 
-To run this project, you only need a Linux system (Ubuntu 22.04 is recommended) with **Docker** installed.
-
 **Install Docker Engine:**
     Follow the official installation guide for your operating system.
     - [Docker installation instructions for Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
