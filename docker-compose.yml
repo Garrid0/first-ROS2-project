@@ -1,32 +1,31 @@
+# docker-compose.yml
 services:
   app:
-    # Construye la imagen usando el Dockerfile en el directorio actual.
     build: .
-    # Nombre de la imagen que se creará.
-    image: bump-and-go-app
-    # Nombre del contenedor en ejecución.
-    container_name: bump_and_go_container
-    # Permite que el contenedor sea interactivo y tenga una pseudo-TTY.
-    stdin_open: true
-    tty: true
-    # Elimina el contenedor cuando se detiene.
-    restart: "no"
-    # Configuración de red. 'host' es la más simple para que ROS funcione a través de la red.
-    network_mode: host
-    # Privilegiado es necesario para acceder a dispositivos como la GPU.
-    privileged: true
-    # Monta volúmenes para la interfaz gráfica.
-    volumes:
-      - /tmp/.X11-unix:/tmp/.X11-unix:rw
-    # Pasa las variables de entorno para la GUI.
+    image: bump-and-go-desktop
+    container_name: bump_and_go_desktop_container
+    ports:
+      - "6080:6080"   # noVNC (browser)
     environment:
-      - DISPLAY=${DISPLAY}
-      - QT_X11_NO_MITSHM=1
-    # Configuración para el acceso a la GPU NVIDIA (si está disponible).
-    #deploy:
-    #  resources:
-    #    reservations:
-    #      devices:
-    #        - driver: nvidia
-    #          count: 1
-    #          capabilities: [gpu]
+      - USER=ubuntu   # optional: create non-root user
+      - PASSWORD=ubuntu
+      - TURTLEBOT3_MODEL=burger
+    shm_size: 2gb
+    volumes:
+      - ./ros2_ws:/ros2_ws   # edit & build your code live in the container
+
+
+#services:
+#  app:
+#    build: .
+#    image: bump-and-go-desktop
+#    container_name: bump_and_go_desktop_container
+#    shm_size: 2gb
+#    ports:
+#      - "6080:6080"        # open http://localhost:6080
+#    environment:
+#      - TURTLEBOT3_MODEL=burger
+#      - START_CODE=1     # uncomment to auto-open VS Code
+#      - START_FIREFOX=1  # uncomment to auto-open Firefox
+#    volumes:
+#      - ./ros2_ws:/ros2_ws   # edit & build your code live in the container

@@ -74,7 +74,7 @@ class BumpAndGoNode(Node):
         
         # State 0: Move forward until an obstacle is found
         if self.robot_state == 0:
-            self.get_logger().info(f'Moving forward. Min frontal distance: {min_frontal_distance:.2f}m')
+            self.get_logger().info(f'Moving forwardOMG. Min frontal distance: {min_frontal_distance:.2f}m')
             twist_msg.linear.x = 0.4  # Speed moving forward
             twist_msg.angular.z = 0.0 # No rotation
             
