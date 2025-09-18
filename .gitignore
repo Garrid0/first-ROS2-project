@@ -33,3 +33,6 @@ desktop.ini
 
 # Docker & env
 .env
+
+ros2_ws/src/turtlebot3_simulations/
+
